@@ -859,6 +859,24 @@
 <body>
     <div class="container">
         <header>
+            <!-- SLIDER FOTO -->
+<div style="position: relative; width: 100%; height: 400px; overflow: hidden; border-radius: 20px; margin-bottom: 30px;">
+    <div class="slider-container" id="slider">
+        <img src="https://raw.githubusercontent.com/bastiolinaferoce-gif/Villa-Olimpia/main/Piscina.jpg" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 1; transition: opacity 1s;">
+        <img src="https://raw.githubusercontent.com/bastiolinaferoce-gif/Villa-Olimpia/main/FacciataOlimpia/FacciataOlimpia.jpg" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s;">
+        <img src="https://raw.githubusercontent.com/bastiolinaferoce-gif/Villa-Olimpia/main/TerrazzaAzalea/TerrazzaAzalea.jpg" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s;">
+    </div>
+</div>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('#slider img');
+setInterval(() => {
+    slides[currentSlide].style.opacity = '0';
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].style.opacity = '1';
+}, 3000);
+</script>
             <h1>🏛️ Villa Olimpia</h1>
             <p class="subtitle">Appartamenti di Lusso in Calabria</p>
             <p class="location">📍 Località Capopiccolo, Isola di Capo Rizzuto (KR)</p>
