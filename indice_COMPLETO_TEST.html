@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Olimpia - Capo Piccolo, Isola di Capo Rizzuto</title>
+    <meta name="description" content="Villa Olimpia - 9 appartamenti di lusso a Capo Piccolo, Isola di Capo Rizzuto. Piscina privata, a 300m dal mare. Prenota ora!">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            color: #888;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .contact-header {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item:hover {
+            color: #764ba2;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            background: white;
+            color: #667eea;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+        }
+
+        .email-btn {
+            background: #EA4335;
+            color: white;
+        }
+
+        .email-btn:hover {
+            background: #c5362d;
+        }
+
+        /* Check-in/out Banner */
+        .checkin-banner {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .checkin-item {
+            text-align: center;
+        }
+
+        .checkin-item .icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .checkin-item h3 {
+            color: #667eea;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+
+        .checkin-item p {
+            color: #666;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .info-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .info-card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+
+        .section-header h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        /* Filters */
+        .filters {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Apartments Grid */
+        .floor-section {
+            margin-bottom: 40px;
+        }
+
+        .floor-label {
+            text-align: center;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+
+        .apartments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .apartment-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 25px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .apartment-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .apartment-card:hover::before {
+            opacity: 1;
+        }
+
+        .apartment-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .apartment-card.size-6 { background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); }
+        .apartment-card.size-4 { background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%); }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            z-index: 1;
+        }
+
+        .apartment-number {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .apartment-icon {
+            font-size: 3em;
+            opacity: 0.9;
+        }
+
+        .apartment-name {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            z-index: 1;
+        }
+
+        .apartment-details {
+            z-index: 1;
+            flex-grow: 1;
+        }
+
+        .detail-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .detail-row .icon {
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+
+        .price-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 15px;
+            backdrop-filter: blur(10px);
+            z-index: 1;
+        }
+
+        .price-value {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .price-label {
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+
+        .special-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+            z-index: 1;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 60px 0;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .attraction-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .attraction-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .attraction-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .attraction-card .distance {
+            color: #FF6B6B;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .attraction-card p {
+            color: #666;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+
+        /* Map Section */
+        .map-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .map-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .map-btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .map-btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .map-btn.gmaps {
+            background: #4285F4;
+        }
+
+        .map-btn.gmaps:hover {
+            background: #357ae8;
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .service-item {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+        }
+
+        .service-item .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .service-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s ease;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .close-btn:hover {
+            color: #667eea;
+            background: #f0f0f0;
+        }
+
+        .modal-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .modal-title {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .modal-subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .modal-section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .feature-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-icon {
+            font-size: 1.5em;
+        }
+
+        .amenities-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .amenity-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .price-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .price-box .amount {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .cta-button {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button.whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .cta-button.email {
+            background: #EA4335;
+            color: white;
+        }
+
+        /* Legend */
+        .legend {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .legend-title {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .legend-items {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legend-color {
+            width: 50px;
+            height: 30px;
+            border-radius: 8px;
+        }
+
+        /* Share Buttons */
+        .share-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .share-btn.facebook { background: #1877F2; }
+        .share-btn.twitter { background: #1DA1F2; }
+        .share-btn.whatsapp { background: #25D366; }
+        .share-btn.email { background: #EA4335; }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 999;
+            text-decoration: none;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .hero-section h2 {
+                font-size: 1.5em;
+            }
+
+            .apartments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .modal-content {
+                padding: 25px;
+            }
+
+            .modal-title {
+                font-size: 1.8em;
+            }
+
+            .section-header h2 {
+                font-size: 1.8em;
+            }
+
+            .map-container iframe {
+                height: 350px;
+            }
+
+            .checkin-banner {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- SLIDER FOTO - TEST -->
+        <div style="position: relative; width: 100%; height: 250px; overflow: hidden; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.2);">
+            <img src="Piscina.jpg" alt="Piscina Villa Olimpia" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+            <h1>🏛️ Villa Olimpia</h1>
+            <p class="subtitle">Appartamenti di Lusso in Calabria</p>
+            <p class="location">📍 Località Capopiccolo, Isola di Capo Rizzuto (KR)</p>
+            <div class="contact-header">
+                <a href="https://wa.me/393335773390" class="contact-item" target="_blank">
+                    💬 333 577 3390
+                    <a href="https://wa.me/393290479193" class="contact-item" target="_blank">
+                    💬 329 047 9193
+                </a>               
+                <a href="/cdn-cgi/l/email-protection#addbc4c1c1ccc2c1c4c0ddc4ccceccddc2dfc4d7d7d8d9c2edcac0ccc4c183cec2c0" class="contact-item">
+                    ✉️ <span class="__cf_email__" data-cfemail="5d2b3431313c323134302d343c3e3c2d322f3427272829321d3a303c3431733e3230">[email&#160;protected]</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Check-in/out Banner -->
+        <div class="checkin-banner">
+            <div class="checkin-item">
+                <div class="icon">🔑</div>
+                <h3>Check-in</h3>
+                <p>15:00 - 21:00</p>
+            </div>
+            <div class="checkin-item">
+                <div class="icon">🚪</div>
+                <h3>Check-out</h3>
+                <p>Entro le 11:00</p>
+            </div>
+            <div class="checkin-item">
+                <div class="icon">📞</div>
+                <h3>Contattaci</h3>
+                <p>Per info e prenotazioni</p>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h2>Benvenuti nel Paradiso dello Ionio</h2>
+            <p>Villa Olimpia è un esclusivo complesso residenziale con 9 appartamenti indipendenti, immerso nel verde a pochi passi dal mare cristallino della costa ionica calabrese. Ogni appartamento è modernamente arredato con comfort di alto livello: cucina attrezzata, camere spaziose, zona living con divano letto e accesso diretto alla piscina privata.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/393335773390?text=Ciao!%20Vorrei%20informazioni%20su%20Villa%20Olimpia" class="hero-btn whatsapp-btn" target="_blank">
+                    💬 WhatsApp
+                </a>
+                <a href="/cdn-cgi/l/email-protection#6f190603030e000306021f060e0c0e1f001d0615151a1b002f08020e0603410c0002501c1a0d050a0c1b523d060c07060a1c1b0e4f060109001d020e15060001064f390603030e4f200306021f060e" class="hero-btn email-btn">
+                    ✉️ Email
+                </a>
+                <a href="#apartments" class="hero-btn">
+                    🏠 Appartamenti
+                </a>
+                <a href="#map" class="hero-btn">
+                    📍 Dove Siamo
+                </a>
+            </div>
+        </div>
+
+        <!-- Info Cards -->
+        <div class="info-cards">
+            <div class="info-card">
+                <div class="icon">🏖️</div>
+                <h3>Sul Mare</h3>
+                <p>A soli 100m da Capo Piccolo Beach. 3 minuti a piedi per raggiungere la spiaggia!</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">🏊‍♂️</div>
+                <h3>Piscina Privata</h3>
+                <p>Piscina esterna esclusiva con area relax e solarium per i nostri ospiti.</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">🅿️</div>
+                <h3>Parcheggio Gratuito</h3>
+                <p>Parcheggio privato gratuito per tutti gli ospiti della villa.</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">🌳</div>
+                <h3>Giardino & BBQ</h3>
+                <p>Ampio giardino con area barbecue e terrazza solarium.</p>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="section-header">
+            <h2>🌟 I Nostri Servizi</h2>
+            <p>Comfort e qualità per un soggiorno indimenticabile</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="icon">❄️</div>
+                <h3>Climatizzazione</h3>
+                <p>Tutti gli appartamenti sono climatizzati</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">📶</div>
+                <h3>Wi-Fi</h3>
+                <p>Connessione internet nelle aree comuni</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">🍳</div>
+                <h3>Cucina Attrezzata</h3>
+                <p>Completa di elettrodomestici e stoviglie</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">🛏️</div>
+                <h3>Memory Foam</h3>
+                <p>Materassi in memory foam per il massimo comfort</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">☕</div>
+                <h3>Caffè Espresso</h3>
+                <p>Macchina per espresso in ogni appartamento</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">🧺</div>
+                <h3>Biancheria Sanificata</h3>
+                <p>Lenzuola e asciugamani inclusi e sanificati</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">🧴</div>
+                <h3>Set di Cortesia</h3>
+                <p>Prodotti per l'igiene personale inclusi</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">🧹</div>
+                <h3>Pulizia</h3>
+                <p>Servizio di pulizia disponibile su richiesta</p>
+            </div>
+        </div>
+
+        <!-- Apartments Section -->
+        <div id="apartments" class="section-header">
+            <h2>🏠 I Nostri Appartamenti</h2>
+            <p>Scegli l'appartamento perfetto per te</p>
+        </div>
+
+        <div class="filters">
+            <strong>Filtra per:</strong>
+            <button class="filter-btn active" onclick="filterApartments('all')">Tutti</button>
+            <button class="filter-btn" onclick="filterApartments('6')">6 Posti Letto</button>
+            <button class="filter-btn" onclick="filterApartments('4')">4 Posti Letto</button>
+            <button class="filter-btn" onclick="filterApartments('ground')">Piano Terra</button>
+            <button class="filter-btn" onclick="filterApartments('first')">Primo Piano</button>
+        </div>
+
+        <div class="floor-section">
+            <div class="floor-label">🏠 Piano Terra</div>
+            <div class="apartments-grid">
+                <!-- Frangipane -->
+                <div class="apartment-card size-6" data-floor="ground" data-size="6" onclick="openModal(1)">
+                    <div class="special-badge">⭐ PREMIUM</div>
+                    <div class="card-header">
+                        <div class="apartment-number">1️⃣</div>
+                        <div class="apartment-icon">🌺</div>
+                    </div>
+                    <div class="apartment-name">FRANGIPANE</div>
+                    <div class="apartment-details">
+                        <div class="detail-row"><span class="icon">👥</span> 6 posti letto</div>
+                        <div class="detail-row"><span class="icon">🛏️</span> 2 camere matrimoniali</div>
+                        <div class="detail-row"><span class="icon">🚿</span> 1 bagno completo</div>
+                        <div class="detail-row"><span class="icon">🏖️</span> Veranda fronte piscina</div>
+                        <div class="detail-row"><span class="icon">📐</span> 55-60 mq</div>
+                    </div>
+                    <div class="price-tag">
+                        <div class="price-value">Da €160</div>
+                        <div class="price-label">al giorno</div>
+                    </div>
+                </div>
+
+                <!-- Fiordaliso -->
+                <div class="apartment-card size-4" data-floor="ground" data-size="4" onclick="openModal(2)">
+                    <div class="card-header">
+                        <div class="apartment-number">2️⃣</div>
+                        <div class="apartment-icon">🌼</div>
+                    </div>
+                    <div class="apartment-name">FIORDALISO</div>
+                    <div class="apartment-details">
+                        <div class="detail-row"><span class="icon">👥</span> 4 posti letto</div>
+                        <div class="detail-row"><span class="icon">🛏️</span> 1 camera matrimoniale</div>
+                        <div class="detail-row"><span class="icon">🚿</span> 1 bagno completo</div>
+                        <div class="detail-row"><span class="icon">🛋️</span> Divano letto matrimoniale</div>
+                        <div class="detail-row"><span class="icon">📐</span> 55-60 mq</div>
+                    </div>
+                    <div class="price-tag">
+                        <div class="price-value">Da €135</div>
+                        <div class="price-label">al giorno</div>
+                    </div>
+                </div>
+
+                <!-- Orchidea -->
+                <div class="apartment-card size-4" data-floor="ground" data-size="4" onclick="openModal(3)">
+                    <div class="card-header">
+                        <div class="apartment-number">3️⃣</div>
+                        <div class="apartment-icon">🌸</div>
+                    </div>
+                    <div class="apartment-name">ORCHIDEA</div>
+                    <div class="apartment-details">
+                        <div class="detail-row"><span class="icon">👥</span> 4 posti letto</div>
+                        <div class="detail-row"><span class="icon">🛏️</span> 1 camera matrimoniale</div>
+                        <div class="detail-row"><span class="icon">🚿</span> 1 bagno completo</div>
+                        <div class="detail-row"><span class="icon">🛋️</span> Divano letto matrimoniale</div>
+                        <div class="detail-row"><span class="icon">📐</span> 55-60 mq</div>
+                    </div>
+                    <div class="price-tag">
+                        <div class="price-value">Da €135</div>
+                        <div class="price-label">al giorno</div>
+                    </div>
+                </div>
+
+                <!-- Tulipano -->
+                <div class="apartment-card size-4" data-floor="ground" data-size="4" onclick="openModal(4)">
+                    <div class="special-badge">🚿 2 BAGNI</div>
+                    <div class="card-header">
+                        <div class="apartment-number">4️⃣</div>
+                        <div class="apartment-icon">🌷</div>
+                    </div>
+                    <div class="apartment-name">TULIPANO</div>
+                    <div class="apartment-details">
+                        <div class="detail-row"><span class="icon">👥</span> 4 posti letto</div>
+                        <div class="detail-row"><span class="icon">🛏️</span> 1 camera matrimoniale</div>
+                        <div class="detail-row"><span class="icon">🚿</span> 2 bagni completi</div>
+                        <div class="detail-row"><span class="icon">🛋️</span> Divano letto matrimoniale</div>
+                        <div class="detail-row"><span class="icon">📐</span> 55-60 mq</div>
+                    </div>
+                    <div class="price-tag">
+                        <div class="price-value">Da €135</div>
+                        <div class="price-label">al giorno</div>
+                    </div>
+                </div>
+
+                <!-- Giglio -->
+                <div class="apartment-card size-6" data-floor="ground" data-size="6" onclick="openModal(5)">
+                    <div class="special-badge">🍳 CUCINA XL</div>
+                    <div class="card-header">
+                        <div class="apartment-number">5️⃣</div>
+                        <div class="apartment-icon">🌺</div>
+                    </div>
+                    <div class="apartment-name">GIGLIO</div>
+                    <div class="apartment-details">
+                        <div class="detail-row"><span class="icon">👥</span> 6 posti letto</div>
+                        <div class="detail-row"><span class="icon">🛏️</span> 1 matrimoniale + 1 piazza e mezza</div>
+                        <div class="detail-row"><span class="icon">🚿</span> 1 bagno completo</div>
+                        <div class="detail-row"><span class="icon">🍳</span> Cucina molto grande</div>
+                        <div class="detail-row"><span class="icon">📐</span> 55-60 mq</div>
+                    </div>
+                    <div class="price-tag">
+                        <div class="price-value">Da €160</div>
+                        <div class="price-label">al giorno</div>
+                    </div>
+                </div>
+
+                <!-- Lavanda -->
+                <div class="apartment-card size-4" data-floor="ground" data-size="4" onclick="openModal(6)">
+                    <div class="card-header">
+                        <div class="apartment-number">6️⃣</div>
+                        <div class="apartment-icon">💜</div>
+                    </div>
+                    <div class="apartment-name">LAVANDA</div>
+                    <div class="apartment-details">
+                        <div class="detail-row"><span class="icon">👥</span> 4 posti letto</div>
+                        <div class="detail-row"><span class="icon">🛏️</span> 1 camera matrimoniale</div>
+                        <div class="detail-row"><span class="icon">🚿</span> 1 bagno completo</div>
+                        <div class="detail-row"><span class="icon">🛋️</span> Divano letto matrimoniale</div>
+                        <div class="detail-row"><span class="icon">📐</span> 55-60 mq</div>
+                    </div>
+                    <div class="price-tag">
+                        <div class="price-value">Da €135</div>
+                        <div class="price-label">al giorno</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="floor-section">
+            <div class="floor-label">🏢 Primo Piano</div>
+            <div class="apartments-grid">
+                <!-- Geranio -->
+                <div class="apartment-card size-6" data-floor="first" data-size="6" onclick="openModal(7)">
+                    <div class="special-badge">👑 TOP LUXURY</div>
+                    <div class="card-header">
+                        <div class="apartment-number">7️⃣</div>
+                        <div class="apartment-icon">🌺</div>
+                    </div>
+                    <div class="apartment-name">GERANIO</div>
+                    <div class="apartment-details">
+                        <div class="detail-row"><span class="icon">👥</span> 6 posti letto</div>
+                        <div class="detail-row"><span class="icon">🛏️</span> 2 camere matrimoniali</div>
+                        <div class="detail-row"><span class="icon">🚿</span> 2 bagni + cabina armadio</div>
+                        <div class="detail-row"><span class="icon">🌅</span> 2 balconi panoramici</div>
+                        <div class="detail-row"><span class="icon">📐</span> 55-60 mq</div>
+                    </div>
+                    <div class="price-tag">
+                        <div class="price-value">Da €160</div>
+                        <div class="price-label">al giorno</div>
+                    </div>
+                </div>
+
+                <!-- Gardenia -->
+                <div class="apartment-card size-4" data-floor="first" data-size="4" onclick="openModal(8)">
+                    <div class="special-badge">🚿 2 BAGNI</div>
+                    <div class="card-header">
+                        <div class="apartment-number">8️⃣</div>
+                        <div class="apartment-icon">🌼</div>
+                    </div>
+                    <div class="apartment-name">GARDENIA</div>
+                    <div class="apartment-details">
+                        <div class="detail-row"><span class="icon">👥</span> 4 posti letto</div>
+                        <div class="detail-row"><span class="icon">🛏️</span> 1 camera matrimoniale</div>
+                        <div class="detail-row"><span class="icon">🚿</span> 2 bagni completi</div>
+                        <div class="detail-row"><span class="icon">🛋️</span> Divano letto matrimoniale</div>
+                        <div class="detail-row"><span class="icon">📐</span> 55-60 mq</div>
+                    </div>
+                    <div class="price-tag">
+                        <div class="price-value">Da €135</div>
+                        <div class="price-label">al giorno</div>
+                    </div>
+                </div>
+
+                <!-- Azalea -->
+                <div class="apartment-card size-4" data-floor="first" data-size="4" onclick="openModal(9)">
+                    <div class="special-badge">🌅 TERRAZZO</div>
+                    <div class="card-header">
+                        <div class="apartment-number">9️⃣</div>
+                        <div class="apartment-icon">🌸</div>
+                    </div>
+                    <div class="apartment-name">AZALEA</div>
+                    <div class="apartment-details">
+                        <div class="detail-row"><span class="icon">👥</span> 4 posti letto</div>
+                        <div class="detail-row"><span class="icon">🛏️</span> 1 camera matrimoniale</div>
+                        <div class="detail-row"><span class="icon">🚿</span> 1 bagno completo</div>
+                        <div class="detail-row"><span class="icon">🌅</span> Terrazzo panoramico</div>
+                        <div class="detail-row"><span class="icon">📐</span> 55-60 mq</div>
+                    </div>
+                    <div class="price-tag">
+                        <div class="price-value">Da €135</div>
+                        <div class="price-label">al giorno</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-title">📊 Legenda Tariffe</div>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);"></div>
+                    <strong>6 Posti Letto - Da €160/giorno</strong>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);"></div>
+                    <strong>4 Posti Letto - Da €135/giorno</strong>
+                </div>
+            </div>
+            <p style="margin-top: 15px; color: #666; font-size: 0.95em;">* I prezzi variano in base al periodo. Contattaci per un preventivo personalizzato.</p>
+        </div>
+
+        <!-- Attractions Section -->
+        <div class="attractions-section">
+            <div class="section-header">
+                <h2>🗺️ Cosa Vedere Nelle Vicinanze</h2>
+                <p>Scopri le meraviglie della costa ionica calabrese</p>
+            </div>
+
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <div class="icon">🏖️</div>
+                    <h3>Capo Piccolo Beach</h3>
+                    <div class="distance">300m - 3 min a piedi</div>
+                    <p>Spiaggia sabbiosa a pochi passi dalla villa, ideale per nuotare e prendere il sole.</p>
+                </div>
+
+                <div class="attraction-card">
+                    <div class="icon">🏰</div>
+                    <h3>Castello Aragonese</h3>
+                    <div class="distance">1,5 km - 5 min in auto</div>
+                    <p>Fortezza medievale simbolo di Le Castella che domina il mare cristallino.</p>
+                </div>
+
+                <div class="attraction-card">
+                    <div class="icon">🤿</div>
+                    <h3>Area Marina Protetta</h3>
+                    <div class="distance">2 km - 6 min in auto</div>
+                    <p>La più estesa d'Italia! Snorkeling, immersioni e osservazione fauna marina.</p>
+                </div>
+
+                <div class="attraction-card">
+                    <div class="icon">🏖️</div>
+                    <h3>Spiaggia di Seleno</h3>
+                    <div class="distance">1,1 km - 15 min a piedi</div>
+                    <p>Ampia spiaggia con zone libere, perfetta per famiglie.</p>
+                </div>
+
+                <div class="attraction-card">
+                    <div class="icon">🏖️</div>
+                    <h3>Le Cannella Beach</h3>
+                    <div class="distance">14 km - 20 min in auto</div>
+                    <p>Spiaggia famosa per la sabbia rossa e il mare cristallino dello Ionio.</p>
+                </div>
+
+                <div class="attraction-card">
+                    <div class="icon">⛪</div>
+                    <h3>Santuario Madonna Greca</h3>
+                    <div class="distance">8 km - 12 min in auto</div>
+                    <p>Santuario settecentesco, importante meta religiosa della zona.</p>
+                </div>
+
+                <div class="attraction-card">
+                    <div class="icon">🏛️</div>
+                    <h3>Capo Colonna</h3>
+                    <div class="distance">20 km - 25 min in auto</div>
+                    <p>Parco archeologico con il Tempio di Hera Lacinia e faro panoramico.</p>
+                </div>
+
+                <div class="attraction-card">
+                    <div class="icon">🏛️</div>
+                    <h3>Crotone Centro</h3>
+                    <div class="distance">25 km - 30 min in auto</div>
+                    <p>Museo Archeologico con reperti della Magna Grecia e lungomare.</p>
+                </div>
+
+                <div class="attraction-card">
+                    <div class="icon">🌲</div>
+                    <h3>Parco Nazionale Sila</h3>
+                    <div class="distance">40 km - 40 min in auto</div>
+                    <p>Sila Piccola: natura incontaminata, laghi e sentieri montani.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transport Section -->
+        <div class="section-header">
+            <h2>✈️ Come Raggiungerci</h2>
+            <p>Facilmente accessibile da tutta la Calabria</p>
+        </div>
+
+        <div class="info-cards">
+            <div class="info-card">
+                <div class="icon">✈️</div>
+                <h3>Aeroporto Crotone</h3>
+                <p><strong>10 minuti</strong><br>Sant'Anna Airport (CRV)</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">✈️</div>
+                <h3>Aeroporto Lamezia</h3>
+                <p><strong>45 minuti</strong><br>Lamezia Terme (SUF)</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">🚂</div>
+                <h3>Stazione Crotone</h3>
+                <p><strong>15 minuti</strong><br>Stazione Ferroviaria</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">🌲</div>
+                <h3>Sila Piccola</h3>
+                <p><strong>40 minuti</strong><br>Parco Nazionale</p>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div id="map" class="map-section">
+            <div class="section-header">
+                <h2>📍 La Nostra Posizione</h2>
+                <p>Località Capopiccolo, Isola di Capo Rizzuto (KR) - Calabria</p>
+            </div>
+
+            <div class="map-buttons">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=38.91408,17.07552" target="_blank" class="map-btn gmaps">
+                    🧭 Apri in Google Maps
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=38.91408,17.07552" target="_blank" class="map-btn">
+                    🗺️ Visualizza Area
+                </a>
+                <a href="https://www.google.com/maps/@38.91408,17.07552,15z" target="_blank" class="map-btn">
+                    📍 Street View
+                </a>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps?q=38.91408,17.07552&hl=it&z=15&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- Share Section -->
+        <div class="share-section">
+            <h2 style="color: #667eea; margin-bottom: 10px;">📱 Condividi Villa Olimpia</h2>
+            <p style="color: #666; margin-bottom: 20px;">Condividi questa pagina con amici e familiari!</p>
+            <div class="share-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://bastiolinaferoce-gif.github.io/Villa-Olimpia/" target="_blank" class="share-btn facebook">
+                    📘 Facebook
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://bastiolinaferoce-gif.github.io/Villa-Olimpia/&text=Guarda Villa Olimpia!" target="_blank" class="share-btn twitter">
+                    🐦 Twitter
+                </a>
+                <a href="https://wa.me/?text=Guarda Villa Olimpia! https://bastiolinaferoce-gif.github.io/Villa-Olimpia/" target="_blank" class="share-btn whatsapp">
+                    💬 WhatsApp
+                </a>
+                <a href="/cdn-cgi/l/email-protection#83bcf0f6e1e9e6e0f7bed5eaefefe2a3ccefeaeef3eae2a5e1ece7fabec4f6e2f1e7e2a3f2f6e6f0f7e2a3f5eaefefe2b9a3ebf7f7f3f0b9acace1e2f0f7eaecefeaede2e5e6f1ece0e6aee4eae5ade4eaf7ebf6e1adeaecacd5eaefefe2aeccefeaeef3eae2ac" class="share-btn email">
+                    ✉️ Email
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="apartmentModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle"></div>
+                <div class="modal-subtitle" id="modalSubtitle"></div>
+            </div>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/393335773390?text=Ciao!%20Vorrei%20informazioni%20su%20Villa%20Olimpia" class="floating-whatsapp" target="_blank" title="Contattaci su WhatsApp">
+        💬
+    </a>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        const apartments = {
+            1: {
+                name: 'FRANGIPANE',
+                icon: '🌺',
+                floor: 'Piano Terra',
+                size: 6,
+                price: 160,
+                rooms: '2 camere da letto matrimoniali',
+                bathrooms: 1,
+                special: 'Veranda fronte piscina privata con arredi esterni',
+                description: 'Appartamento premium al piano terra con accesso diretto alla piscina. Ideale per famiglie che desiderano comfort e privacy. La veranda esterna permette di godersi il sole e rilassarsi con vista sulla piscina.'
+            },
+            2: {
+                name: 'FIORDALISO',
+                icon: '🌼',
+                floor: 'Piano Terra',
+                size: 4,
+                price: 135,
+                rooms: '1 camera da letto matrimoniale',
+                bathrooms: 1,
+                special: 'Design elegante e funzionale',
+                description: 'Appartamento accogliente con tutti i comfort necessari per un soggiorno rilassante. Perfetto per coppie o piccole famiglie.'
+            },
+            3: {
+                name: 'ORCHIDEA',
+                icon: '🌸',
+                floor: 'Piano Terra',
+                size: 4,
+                price: 135,
+                rooms: '1 camera da letto matrimoniale',
+                bathrooms: 1,
+                special: 'Arredi di ottimo livello',
+                description: 'Perfetto per coppie o piccole famiglie che cercano un rifugio confortevole a due passi dal mare.'
+            },
+            4: {
+                name: 'TULIPANO',
+                icon: '🌷',
+                floor: 'Piano Terra',
+                size: 4,
+                price: 135,
+                rooms: '1 camera da letto matrimoniale',
+                bathrooms: 2,
+                special: 'Dotato di 2 bagni completi',
+                description: 'Maggiore comfort grazie alla presenza di due bagni completi, ideale per chi cerca praticità e comodità.'
+            },
+            5: {
+                name: 'GIGLIO',
+                icon: '🌺',
+                floor: 'Piano Terra',
+                size: 6,
+                price: 160,
+                rooms: '1 camera matrimoniale + 1 camera con letto da una piazza e mezza',
+                bathrooms: 1,
+                special: 'Cucina molto grande e zona living ottimamente arredata',
+                description: 'Spazioso appartamento perfetto per famiglie, con ampia cucina completamente attrezzata per chi ama cucinare e condividere pasti insieme.'
+            },
+            6: {
+                name: 'LAVANDA',
+                icon: '💜',
+                floor: 'Piano Terra',
+                size: 4,
+                price: 135,
+                rooms: '1 camera da letto matrimoniale',
+                bathrooms: 1,
+                special: 'Atmosfera rilassante',
+                description: 'Un rifugio tranquillo con tutti i comfort moderni, ideale per una vacanza all\'insegna del relax.'
+            },
+            7: {
+                name: 'GERANIO',
+                icon: '🌺',
+                floor: 'Primo Piano',
+                size: 6,
+                price: 160,
+                rooms: '2 camere da letto matrimoniali',
+                bathrooms: 2,
+                special: 'Il più bello: 2 bagni completi (uno en-suite con antibagno), cabina armadio, 2 balconi panoramici',
+                description: 'L\'appartamento top di gamma della villa. Lusso, comfort e vista panoramica per un soggiorno indimenticabile. I due balconi panoramici offrono vista mozzafiato sulla costa ionica.'
+            },
+            8: {
+                name: 'GARDENIA',
+                icon: '🌼',
+                floor: 'Primo Piano',
+                size: 4,
+                price: 135,
+                rooms: '1 camera da letto matrimoniale',
+                bathrooms: 2,
+                special: 'Dotato di 2 bagni completi',
+                description: 'Comfort elevato al primo piano con doppio servizio. Perfetto per chi cerca comodità e funzionalità.'
+            },
+            9: {
+                name: 'AZALEA',
+                icon: '🌸',
+                floor: 'Primo Piano',
+                size: 4,
+                price: 135,
+                rooms: '1 camera da letto matrimoniale',
+                bathrooms: 1,
+                special: 'Splendido terrazzo panoramico',
+                description: 'Vista mozzafiato dal terrazzo privato, perfetto per momenti di relax all\'aperto con vista sul mare e sul tramonto.'
+            }
+        };
+
+        function openModal(aptNumber) {
+            const apt = apartments[aptNumber];
+            const modal = document.getElementById('apartmentModal');
+            
+            document.getElementById('modalTitle').innerHTML = `${apt.icon} ${apt.name}`;
+            document.getElementById('modalSubtitle').innerHTML = `Appartamento ${aptNumber} - ${apt.floor}`;
+            
+            const modalBody = document.getElementById('modalBody');
+            modalBody.innerHTML = `
+                <div class="modal-section">
+                    <p style="font-size: 1.1em; color: #666; line-height: 1.6;">${apt.description}</p>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-title">🏠 Caratteristiche Principali</div>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="feature-icon">👥</span>
+                            <div>
+                                <strong>${apt.size} Posti Letto</strong><br>
+                                <small>${apt.rooms}</small>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🚿</span>
+                            <div>
+                                <strong>${apt.bathrooms} Bagno${apt.bathrooms > 1 ? 'i' : ''}</strong><br>
+                                <small>Completo di box doccia</small>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📐</span>
+                            <div>
+                                <strong>55-60 mq</strong><br>
+                                <small>Metratura</small>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">⭐</span>
+                            <div>
+                                <strong>Premium</strong><br>
+                                <small>Arredi di lusso</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-title">✨ Caratteristica Speciale</div>
+                    <div style="background: #fff3cd; padding: 15px; border-radius: 10px; border-left: 4px solid #ffc107;">
+                        <strong>🌟 ${apt.special}</strong>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-title">🎯 Dotazioni Incluse</div>
+                    <div class="amenities-list">
+                        <span class="amenity-tag">❄️ Climatizzatore</span>
+                        <span class="amenity-tag">🍳 Cucina attrezzata</span>
+                        <span class="amenity-tag">👔 Lavatrice</span>
+                        <span class="amenity-tag">📺 TV LED</span>
+                        <span class="amenity-tag">📶 Wi-Fi</span>
+                        <span class="amenity-tag">🛋️ Divano letto matrimoniale</span>
+                        <span class="amenity-tag">🍽️ Stoviglie complete</span>
+                        <span class="amenity-tag">⚡ Elettrodomestici</span>
+                        <span class="amenity-tag">☕ Macchina espresso</span>
+                        <span class="amenity-tag">🛏️ Materassi memory foam</span>
+                        <span class="amenity-tag">🧴 Set di cortesia</span>
+                        <span class="amenity-tag">🧺 Biancheria sanificata</span>
+                        <span class="amenity-tag">🏊‍♂️ Piscina privata</span>
+                        <span class="amenity-tag">🌳 Giardino privato</span>
+                        <span class="amenity-tag">🍖 Area BBQ</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-title">🕐 Orari</div>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                        <p style="margin-bottom: 8px;">🔑 <strong>Check-in:</strong> 15:00 - 21:00</p>
+                        <p>🚪 <strong>Check-out:</strong> Entro le 11:00</p>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="section-title">📏 Distanze dalla Struttura</div>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                        <p style="margin-bottom: 8px;">🏖️ <strong>Mare:</strong> 300m (3 min a piedi)</p>
+                        <p style="margin-bottom: 8px;">🏰 <strong>Castello Aragonese:</strong> 1,5 km (5 min)</p>
+                        <p style="margin-bottom: 8px;">✈️ <strong>Aeroporto Crotone:</strong> 10 minuti</p>
+                        <p>✈️ <strong>Aeroporto Lamezia:</strong> 45 minuti</p>
+                    </div>
+                </div>
+
+                <div class="price-box">
+                    <div style="font-size: 1.2em; opacity: 0.9;">Tariffa a partire da</div>
+                    <div class="amount">€${apt.price}</div>
+                    <div style="opacity: 0.9; margin: 10px 0;">al giorno</div>
+                    <p style="font-size: 0.9em; opacity: 0.9;">I prezzi variano in base al periodo</p>
+                    <div style="margin-top: 20px;">
+                        <a href="https://wa.me/393335773390?text=Ciao!%20Vorrei%20informazioni%20sull%27appartamento%20${apt.name}" target="_blank" class="cta-button whatsapp">
+                            💬 WhatsApp
+                        </a>
+                        <a href="mailto:villaolimpiacaporizzuto@gmail.com?subject=Info appartamento ${apt.name}" class="cta-button email">
+                            ✉️ Email
+                        </a>
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.add('show');
+        }
+
+        function closeModal() {
+            document.getElementById('apartmentModal').classList.remove('show');
+        }
+
+        function filterApartments(filter) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.apartment-card');
+            
+            cards.forEach(card => {
+                let show = true;
+                
+                if (filter === '6') {
+                    show = card.dataset.size === '6';
+                } else if (filter === '4') {
+                    show = card.dataset.size === '4';
+                } else if (filter === 'ground') {
+                    show = card.dataset.floor === 'ground';
+                } else if (filter === 'first') {
+                    show = card.dataset.floor === 'first';
+                }
+                
+                card.style.display = show ? 'flex' : 'none';
+            });
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('apartmentModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        window.addEventListener('load', function() {
+            const cards = document.querySelectorAll('.apartment-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // Smooth scroll for anchor links
